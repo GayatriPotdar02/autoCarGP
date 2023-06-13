@@ -1,0 +1,29 @@
+<title>eCommerce Product Detail</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+<button class="btn"><i class="fa fa-home" routerLink="/home" ></i></button>
+<div
+  style="
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  "
+>
+  <div
+    *ngFor="let user of userInfo"
+    class="card"
+    style="width: 18rem; margin-top: 20px"
+  >
+    <img
+      style="height: 190px; width: 286px; object-fit: contain; padding: 10px;"
+      class="card-img-top"
+      src="{{ user.image }}"
+      (click)="viewUser(user)"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h6 class="card-text">{{ user.name }}</h6>
+    </div>
+  </div>
+</div>

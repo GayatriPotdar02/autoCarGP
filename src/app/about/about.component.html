@@ -1,0 +1,79 @@
+<nav style="height: 90px;padding: 0px 0px 0px 0px;" class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <img style="height: 90px; width: 80px;" class="logo" src="../assets/img/L1.webp" alt="">
+    <div style="margin-left: 10px; margin-right: 20px;" class="container" >
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="animate-charcter"> RENT AND BOOK YOUR CAR</h2>
+        </div>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav"></div>
+      <div class="navbar-nav ms-auto">
+        <a style="margin-bottom: 10px;" *ngIf="!isUserLogedIn" routerLink="/login" class="btn btn-primary"
+          >Login</a
+        >
+        <a *ngIf="!isUserLogedIn" routerLink="/register" class="btn btn-primary"
+          >Register</a
+        >
+
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/myprofile">My profile</button>
+          <button mat-menu-item routerLink="/whoisusingourapp">
+            Who are using our app?
+          </button>
+        </mat-menu>
+
+        <b
+          ><h5 *ngIf="profileData" class="nav-item nav-link">
+            {{ profileData.name }}
+          </h5></b
+        >
+        <a *ngIf="isUserLogedIn" (click)="LogOut()" class="btn btn-primary"
+          >Log out</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <div style="text-align: center;">
+  <img class="other" src="../../assets/img/01.jpeg" />
+</div> -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner active"  >
+    <div class="carousel-item active">
+      <img src="../../assets/img/head.jpg"  class="d-block w-100" alt="..." style="width:100%; height: 680px; ">
+      <div class="content" style="position: absolute; bottom: 5px; width: 910px; height: 250px; margin-top:155px; margin-bottom:225px; margin-left: 270px; margin-right: 100px; padding:40px;color: #f1f1f1; background: rgba(16, 16, 16, 0.5);">
+        <h1 >The <b> Perfect Car </b> for your trip is here.  </h1>
+        <h3  style="width: 655spx; padding-right: 20px; margin:0px;">Book your favourite car for the trip now!</h3>
+      </div>  
+    </div>
+     <div class="carousel-item ">
+      <img src="../../assets/img/singlecar.jpg" class="d-block " style="height: 760px; width:1520px;" alt="...">
+      <div class="content" style=" position: absolute;bottom: 5px; width: 910px; height: 250px; margin-top:155px; margin-bottom:295px; margin-left: 270px;padding:40px; margin-right: 100px;background: rgb(251, 251, 251,0.3); color: rgb(236, 223, 223); ">
+        <h1> <b> Make money </b> with your <b> Car</b>.  </h1>
+        <h3  style="width: 655spx; padding-right: 20px; margin:0px;">Renting your vehicle can be great way to make money with your car!</h3>
+      </div>
+    </div> 
+    
+  </div>
+</div>

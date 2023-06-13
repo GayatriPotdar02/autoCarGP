@@ -1,0 +1,18 @@
+
+<form [formGroup]="loginForm" class="formcontainer">
+    <h2 class="text-primary">Login</h2>
+<br>
+<input [(ngModel)]="email" formControlName="email" class="form-control" type="email" placeholder="Email Address ">
+<br> 
+<input [(ngModel)]="password" formControlName="password" class="form-control" type="password" placeholder="Password">
+<br>
+
+<br>
+
+<button type="button" style="margin-left:100px ;" (click)="logindata()" class="btn btn-primary">Login</button>
+<br>
+<button (click)="goToRegister()" style="margin-left:100px ;" class="btn btn-primary" type="button">Register</button>
+
+</form>
+
+
